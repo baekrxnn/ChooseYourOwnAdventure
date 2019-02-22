@@ -6,34 +6,29 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "It's lunch time. You're hungry",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Hi Hungry!",
+                    nextLevel: "wake_up",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Find Food",
+                    nextLevel: "eat",
                 },
+                
+                {
+                    text: "Continue Working",
+                    nextLevel: "hungry"
+                }
             ]
         },
 
-        cave: {
-            background_image: "fire.gif",
-            music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
-            choices: [
-                {
-                    text: "Start over",
-                    nextLevel: "start",
-                },
-            ]
-        },
-
-        field: {
-            message: "Some adventurer you are...",
+        wake_up: {
+            //background_image: "fire.gif",
+            //music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "Your boss is telling you to wake up",
             choices: [
                 {
                     text: "Start over",
@@ -41,6 +36,62 @@ var game = {
                 },
             ]
         },
+        
+        hungry: {
+            choices:[
+                {
+                    text: "Take a nap",
+                    nextLevel: "start",
+                },
+                
+                {
+                    text: "Eat",
+                    nextLevel: "eat"
+                },
+                
+                ]
+        },
+        
+
+        eat: {
+            message: "What to eat?",
+            choices: [
+                {
+                    text: "Salad",
+                    nextLevel: "gymwork",
+                },
+                
+                {
+                    text: "Steak",
+                    nextLevel: "",
+                },
+                
+                {
+                    text: "Fastfood",
+                    nextLevel: "oof",
+                },
+                
+                {
+                    text: "Make Lunch",
+                    nextLevel: ""
+                }
+            ]
+        },
+        
+        oof: {
+            text: "Oof.",
+            nextLevel: "start",
+        },
+        
+        gymwork: {
+            choices: [
+                {
+                    text: "Get back to work"
+                }
+                
+                ]
+        }
+        
 
     }
 };
