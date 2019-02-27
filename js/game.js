@@ -1,7 +1,7 @@
 // NOTE - You must have a level with the name "start".  This is used as the first level in the game.
 
 var game = {
-    music: "98_Lost_Mine.mp3",
+    //music: "98_Lost_Mine.mp3",
     background_image: "intro-bg.jpg",
     levels: {
 
@@ -26,7 +26,7 @@ var game = {
         },
 
         wake_up: {
-            //background_image: "fire.gif",
+            background_image: "clock.jpg",
             //music: "Final-Fantasy-7-Boss-Battle.mp3",
             message: "Your boss is telling you to wake up",
             choices: [
@@ -56,6 +56,7 @@ var game = {
 
         eat: {
             message: "What to eat?",
+            background_image: "strawberry.jpg",
             choices: [
                 {
                     text: "Salad",
@@ -80,6 +81,7 @@ var game = {
         },
         
         oof: {
+            background_image: "fire.gif",
             message:"Oof.",
             choices: [
                 {
@@ -91,6 +93,7 @@ var game = {
         
         next: {
             message: "What next?",
+            background_image: "strawberry.jpg",
             choices: [
                 {
                     text: "Get back to work",
@@ -107,6 +110,7 @@ var game = {
         
         have_fun: {
             message: "Have Fun!",
+            background_image: "forest.gif",
             choices: [
                 {
                     text:"Fun(?)",
@@ -117,6 +121,7 @@ var game = {
         
         enjoy: {
             message: "Enjoy!",
+            background_image: "strawberry.jpg",
             choices: [
                 {
                     text:"Enjoy my delicious lunch",
@@ -127,6 +132,7 @@ var game = {
         
         alone: {
             message:"Alone?",
+            background_image: "strawberry.jpg",
             choices: [
                 {
                     text: "Yes",
@@ -142,6 +148,7 @@ var game = {
         
         paying: {
             message:"Who's paying?",
+            background_image: "strawberry.jpg",
             choices: [
                 {
                     text: "You",
