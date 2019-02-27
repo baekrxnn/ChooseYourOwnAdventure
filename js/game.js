@@ -38,10 +38,11 @@ var game = {
         },
         
         hungry: {
+            message:"Still hungry",
             choices:[
                 {
                     text: "Take a nap",
-                    nextLevel: "start",
+                    nextLevel: "wake_up",
                 },
                 
                 {
@@ -49,7 +50,7 @@ var game = {
                     nextLevel: "eat"
                 },
                 
-                ]
+            ]
         },
         
 
@@ -58,12 +59,12 @@ var game = {
             choices: [
                 {
                     text: "Salad",
-                    nextLevel: "gymwork",
+                    nextLevel: "next",
                 },
                 
                 {
                     text: "Steak",
-                    nextLevel: "",
+                    nextLevel: "alone",
                 },
                 
                 {
@@ -73,25 +74,94 @@ var game = {
                 
                 {
                     text: "Make Lunch",
-                    nextLevel: ""
+                    nextLevel: "enjoy"
                 }
             ]
         },
         
         oof: {
-            text: "Oof.",
-            nextLevel: "start",
-        },
-        
-        gymwork: {
+            message:"Oof.",
             choices: [
                 {
-                    text: "Get back to work"
-                }
+                text: "Should probably eat healthier.",
+                nextLevel: "start",
+                },
+            ]
+        },
+        
+        next: {
+            message: "What next?",
+            choices: [
+                {
+                    text: "Get back to work",
+                    nextLevel:"have_fun",
+                },
+                    
+                {
+                    text: "Go to the gym",
+                    nextLevel:"have_fun",   
+                },
                 
-                ]
-        }
+            ]
+        },
+        
+        have_fun: {
+            message: "Have Fun!",
+            choices: [
+                {
+                    text:"Fun(?)",
+                    nextLevel:"start",
+                },
+            ]
+        },
+        
+        enjoy: {
+            message: "Enjoy!",
+            choices: [
+                {
+                    text:"Enjoy my delicious lunch",
+                    nextLevel:"start",
+                },
+            ]
+        },
+        
+        alone: {
+            message:"Alone?",
+            choices: [
+                {
+                    text: "Yes",
+                    nextLevel:"enjoy",
+                },
+                
+                {
+                    text: "No",
+                    nextLevel:"paying",
+                },
+            ]
+        },
+        
+        paying: {
+            message:"Who's paying?",
+            choices: [
+                {
+                    text: "You",
+                    nextLevel:"next",
+                },
+                
+                {
+                    text: "share",
+                    nextLevel:"next",
+                },
+                
+                {
+                    text: "friend",
+                    nextLevel:"enjoy",
+                },
+            ]
+        },
+
         
 
+        
     }
 };
